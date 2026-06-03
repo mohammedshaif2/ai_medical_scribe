@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Data
+/data/audio/*
+/data/reports/*
+/data/temp/*
+!data/audio/.gitkeep
+!data/reports/.gitkeep
+!data/temp/.gitkeep
+
+# Models
+/models/*
+!models/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Test outputs
+test-reports/
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
