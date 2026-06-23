@@ -61,52 +61,52 @@ Jinja2==3.1.6
 orjson==3.11.9
 
 
-# ============================================
+ ============================================
 # AI MEDICAL SCRIBE – COMMANDS (PowerShell)
-# ============================================
+ ============================================
 
-# 1. Navigate to your project folder
+1. Navigate to your project folder
 cd D:\final year\ai-medical-scribe
 
-# 2. Activate virtual environment
+2. Activate virtual environment
 .\venv\Scripts\Activate.ps1
 
-# 3. (First time only) Install dependencies
+3. (First time only) Install dependencies
 pip install -r requirements.txt
 
-# 4. Start MongoDB (if not running as a service)
-#    Open a new terminal and run:
+4. Start MongoDB (if not running as a service)
+  Open a new terminal and run:
 mongod
 
-# 5. Start Ollama (if not already running)
-#    Open a new terminal and run:
+5. Start Ollama (if not already running)
+   Open a new terminal and run:
 ollama serve
 
-# 6. Generate a test audio file (if you don't have one)
+6. Generate a test audio file (if you don't have one)
 python generate_test_audio.py
 
-# 7. Start FastAPI Backend (keep this terminal open)
+7. Start FastAPI Backend (keep this terminal open)
 python -m app.main
 # Backend will be available at: http://localhost:8000
 # API docs: http://localhost:8000/docs
 
-# 8. Open a NEW PowerShell terminal and start Gradio Frontend
+8. Open a NEW PowerShell terminal and start Gradio Frontend
 cd D:\final year\ai-medical-scribe
 .\venv\Scripts\Activate.ps1
 python frontend\gradio_app.py
 # Gradio UI will be at: http://localhost:7860
 
-# 9. Test the application
-#    - Open browser to http://localhost:7860
-#    - Register / Login
-#    - Add a patient in the Dashboard tab
-#    - Upload test_consultation.wav in Audio Upload tab
-#    - Click "Generate Report"
+9. Test the application
+   - Open browser to http://localhost:7860
+   - Register / Login
+   - Add a patient in the Dashboard tab
+   - Upload test_consultation.wav in Audio Upload tab
+   - Click "Generate Report"
 
-# 10. (Optional) Test audio processing directly with curl
+10. (Optional) Test audio processing directly with curl
 curl -X POST http://localhost:8000/api/v1/process-text -d "text=Doctor: Hello%0APatient: I have a headache"
 
-# 11. Stop all servers: Press Ctrl+C in each terminal
+11. Stop all servers: Press Ctrl+C in each terminal
 
 
 
